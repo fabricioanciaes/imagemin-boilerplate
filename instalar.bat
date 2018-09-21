@@ -21,6 +21,12 @@ cls
 echo [101;93m INSTALANDO PACOTES DO NPM [0m
 call npm install
 call npm i -g gulp
+call node node_modules/jpegtran-bin/lib/install.js
+call node node_modules/gifsicle/lib/install.js
+call node node_modules/zopflipng-bin/lib/install.js
+call node node_modules/mozjpeg/lib/install.js
+call node node_modules/giflossy/lib/install.js
+call node node_modules/pngquant-bin/lib/install.js
 echo ----------------------------------------
 echo ----------------------------------------
 echo [101;93m Deve estar funcionando agora [0m

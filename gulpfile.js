@@ -9,7 +9,7 @@ var imageminGiflossy = require('imagemin-giflossy');
 
 //compress all images
 gulp.task('imagemin', function () {
-  return gulp.src(['originais/**/*.{gif,png,jpg}'])
+  return gulp.src(['originais/**/*.{gif,png,jpg,svg}'])
     .pipe(cache(imagemin([
       //png
       imageminPngquant({
