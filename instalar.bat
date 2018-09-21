@@ -1,16 +1,22 @@
 @echo off
+setlocal
+SET AREYOUSURE=N
 cls
 echo [101;93m COMPRESSOR DE IMAGENS [0m
+SET /P AREYOUSURE=Voce tem Node.js instalado (Y/[N])?
+IF /I "%AREYOUSURE%" NEQ "N" GOTO NPMI
+cls
 echo Primeiro instale o [92mNode.js[0m
 echo tanto faz o current ou lts
-echo Vou abrir a pagina pra voce, quando terminar volte pra essa tela
+echo quando terminar de instalar rode esse batch de novo.
+echo Vou abrir o site pra voce:
 echo ----------------------------------------
 pause
 cls
 start "" https://nodejs.org/en/download/
-echo Terminou de instalar o node.js? aperte qualquer coisa para continuar
-echo ----------------------------------------
+exit
 pause
+:NPMI
 cls
 echo [101;93m INSTALANDO PACOTES DO NPM [0m
 call npm install

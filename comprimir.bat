@@ -1,1 +1,3 @@
-gulp imagemin
+@echo off
+call gulp imagemin --verbose
+pause
